@@ -1,0 +1,263 @@
+:root {
+  /* ── Core palette ─────────────────────────────────────────── */
+  --color-bg-base: #F9F8F6;
+  --color-bg-surface: #FFFFFF;
+  --color-text-primary: #2D2D2D;
+  --color-text-secondary: #6E6E6E;
+  --color-text-mono: #4A4A4A;
+  --color-action-primary: #4E8A64;
+  --color-action-hover: #3D7A53;
+  --color-status-secure: #4E8A64;
+  --color-status-danger: #D06050;
+  --color-border-thin: #E0DDD7;
+
+  /* ── Multi-hue accent system ──────────────────────────────── */
+  --ds-color-brand-500: var(--color-action-primary);
+  --ds-color-brand-600: var(--color-action-hover);
+  --ds-color-brand-700: #336B45;
+  --ds-color-accent-500: var(--color-action-primary);
+
+  /* Blue accent for informational elements */
+  --ds-color-blue-50: #EFF4FF;
+  --ds-color-blue-100: #DBE7FF;
+  --ds-color-blue-500: #4A7ADB;
+  --ds-color-blue-600: #3A66C0;
+  --ds-color-blue-700: #2E5299;
+
+  /* Amber accent for warnings & secondary highlights */
+  --ds-color-amber-50: #FFF8EE;
+  --ds-color-amber-100: #FFEDCC;
+  --ds-color-amber-500: #D09840;
+  --ds-color-amber-600: #B58430;
+  --ds-color-amber-700: #8A6420;
+
+  /* Purple accent for profiles & state management */
+  --ds-color-purple-50: #F5F0FF;
+  --ds-color-purple-100: #E8DEFF;
+  --ds-color-purple-500: #7C5DBF;
+  --ds-color-purple-600: #6948A8;
+  --ds-color-purple-700: #553A8B;
+
+  /* ── Neutral scale ────────────────────────────────────────── */
+  --ds-color-neutral-0: var(--color-bg-surface);
+  --ds-color-neutral-25: var(--color-bg-base);
+  --ds-color-neutral-50: #F3F1ED;
+  --ds-color-neutral-100: #EEEAE4;
+  --ds-color-neutral-200: #E6E1DA;
+  --ds-color-neutral-300: #D8D2C8;
+  --ds-color-neutral-400: #BDB5A8;
+  --ds-color-neutral-500: #8C8377;
+  --ds-color-neutral-600: #6E6E6E;
+  --ds-color-neutral-800: #4A4A4A;
+  --ds-color-neutral-900: #2D2D2D;
+
+  /* ── Status colors ────────────────────────────────────────── */
+  --ds-color-warning-500: #C8A050;
+  --ds-color-warning-600: #A88838;
+  --ds-color-success-100: #ECF4EE;
+  --ds-color-success-700: var(--color-status-secure);
+  --ds-color-danger-500: var(--color-status-danger);
+  --ds-color-danger-600: #B8504A;
+
+  /* ── Surfaces ─────────────────────────────────────────────── */
+  --ds-surface-app: var(--color-bg-base);
+  --ds-surface-card: var(--color-bg-surface);
+  --ds-surface-header: #F5F3EF;
+  --ds-surface-hover: #EFECE6;
+  --ds-surface-pinned: #EDF5EF;
+
+  --ds-text-primary: var(--color-text-primary);
+  --ds-text-secondary: var(--color-text-secondary);
+
+  --ds-border-subtle: var(--color-border-thin);
+  --ds-border-strong: #CFC8BE;
+
+  --ds-radius-sm: 6px;
+  --ds-radius-md: 8px;
+
+  --ds-motion-standard: all 0.2s ease;
+
+  --ds-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --ds-shadow-md: 0 6px 20px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.03);
+
+  /* ── Legacy aliases ───────────────────────────────────────── */
+  --primary-color: var(--ds-color-brand-500);
+  --secondary-color: var(--ds-color-brand-600);
+  --accent-color: var(--ds-color-accent-500);
+  --background-color: var(--ds-surface-app);
+  --card-background: var(--ds-surface-card);
+  --text-color: var(--ds-text-primary);
+  --text-color-light: var(--ds-text-secondary);
+  --border-color: var(--ds-border-subtle);
+  --header-color: var(--ds-surface-header);
+  --hover-color: var(--ds-surface-hover);
+  --pinned-background: var(--ds-surface-pinned);
+  --button-hover: var(--ds-color-brand-700);
+  --shadow: var(--ds-shadow-sm);
+  --shadow-hover: var(--ds-shadow-md);
+  --shadow-sm: var(--shadow);
+  --shadow-md: var(--shadow-hover);
+  --border-radius: var(--ds-radius-md);
+  --transition: var(--ds-motion-standard);
+
+  /* ── Scrollbar ────────────────────────────────────────────── */
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: var(--ds-color-neutral-300);
+  --scrollbar-thumb-hover: var(--ds-color-neutral-400);
+
+  /* ── Toast variants ───────────────────────────────────────── */
+  --toast-success-bg: #EDF5EF;
+  --toast-success-border: color-mix(in srgb, var(--color-action-primary) 30%, var(--ds-border-subtle) 70%);
+  --toast-error-bg: #FDF2F0;
+  --toast-error-border: color-mix(in srgb, var(--color-status-danger) 30%, var(--ds-border-subtle) 70%);
+}
+
+/* ── Dark Theme ─────────────────────────────────────────────── */
+
+[data-theme='dark'] {
+  --color-bg-base: #18181C;
+  --color-bg-surface: #202024;
+  --color-text-primary: #E8E6E1;
+  --color-text-secondary: #9A9590;
+  --color-text-mono: #C0BAB2;
+  --color-action-primary: #6BB280;
+  --color-action-hover: #5AA06E;
+  --color-status-secure: #6BB280;
+  --color-status-danger: #E07B6E;
+  --color-border-thin: #2E2E34;
+
+  --ds-color-brand-700: #4A9460;
+
+  --ds-color-blue-50: #1A2234;
+  --ds-color-blue-100: #1E2840;
+  --ds-color-blue-500: #6B9AE8;
+  --ds-color-blue-600: #5888D4;
+  --ds-color-blue-700: #4670B0;
+
+  --ds-color-amber-50: #2A2418;
+  --ds-color-amber-100: #332A1A;
+  --ds-color-amber-500: #E0B050;
+  --ds-color-amber-600: #C8A040;
+  --ds-color-amber-700: #A88830;
+
+  --ds-color-purple-50: #221E30;
+  --ds-color-purple-100: #282238;
+  --ds-color-purple-500: #9B7DE0;
+  --ds-color-purple-600: #8668C4;
+  --ds-color-purple-700: #7058A8;
+
+  --ds-color-neutral-0: #202024;
+  --ds-color-neutral-25: #18181C;
+  --ds-color-neutral-50: #262630;
+  --ds-color-neutral-100: #2C2C36;
+  --ds-color-neutral-200: #34343E;
+  --ds-color-neutral-300: #3E3E48;
+  --ds-color-neutral-400: #50505A;
+  --ds-color-neutral-500: #7A7A82;
+  --ds-color-neutral-600: #9A9590;
+  --ds-color-neutral-800: #C0BAB2;
+  --ds-color-neutral-900: #E8E6E1;
+
+  --ds-color-warning-500: #D0B060;
+  --ds-color-warning-600: #B89848;
+  --ds-color-success-100: #1C2A20;
+  --ds-color-success-700: #6BB280;
+  --ds-color-danger-500: #E07B6E;
+  --ds-color-danger-600: #C8685C;
+
+  --ds-surface-app: #18181C;
+  --ds-surface-card: #202024;
+  --ds-surface-header: #24242C;
+  --ds-surface-hover: #2A2A32;
+  --ds-surface-pinned: #1C2A20;
+
+  --ds-border-subtle: #2E2E34;
+  --ds-border-strong: #40404C;
+
+  --ds-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
+  --ds-shadow-md: 0 6px 20px rgba(0, 0, 0, 0.4);
+
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: #3E3E48;
+  --scrollbar-thumb-hover: #50505A;
+
+  --toast-success-bg: #1C2A20;
+  --toast-success-border: color-mix(in srgb, #6BB280 30%, #2E2E34 70%);
+  --toast-error-bg: #2D1E1C;
+  --toast-error-border: color-mix(in srgb, #E07B6E 30%, #2E2E34 70%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-bg-base: #18181C;
+    --color-bg-surface: #202024;
+    --color-text-primary: #E8E6E1;
+    --color-text-secondary: #9A9590;
+    --color-text-mono: #C0BAB2;
+    --color-action-primary: #6BB280;
+    --color-action-hover: #5AA06E;
+    --color-status-secure: #6BB280;
+    --color-status-danger: #E07B6E;
+    --color-border-thin: #2E2E34;
+
+    --ds-color-brand-700: #4A9460;
+
+    --ds-color-blue-50: #1A2234;
+    --ds-color-blue-100: #1E2840;
+    --ds-color-blue-500: #6B9AE8;
+    --ds-color-blue-600: #5888D4;
+    --ds-color-blue-700: #4670B0;
+
+    --ds-color-amber-50: #2A2418;
+    --ds-color-amber-100: #332A1A;
+    --ds-color-amber-500: #E0B050;
+    --ds-color-amber-600: #C8A040;
+    --ds-color-amber-700: #A88830;
+
+    --ds-color-purple-50: #221E30;
+    --ds-color-purple-100: #282238;
+    --ds-color-purple-500: #9B7DE0;
+    --ds-color-purple-600: #8668C4;
+    --ds-color-purple-700: #7058A8;
+
+    --ds-color-neutral-0: #202024;
+    --ds-color-neutral-25: #18181C;
+    --ds-color-neutral-50: #262630;
+    --ds-color-neutral-100: #2C2C36;
+    --ds-color-neutral-200: #34343E;
+    --ds-color-neutral-300: #3E3E48;
+    --ds-color-neutral-400: #50505A;
+    --ds-color-neutral-500: #7A7A82;
+    --ds-color-neutral-600: #9A9590;
+    --ds-color-neutral-800: #C0BAB2;
+    --ds-color-neutral-900: #E8E6E1;
+
+    --ds-color-warning-500: #D0B060;
+    --ds-color-warning-600: #B89848;
+    --ds-color-success-100: #1C2A20;
+    --ds-color-success-700: #6BB280;
+    --ds-color-danger-500: #E07B6E;
+    --ds-color-danger-600: #C8685C;
+
+    --ds-surface-app: #18181C;
+    --ds-surface-card: #202024;
+    --ds-surface-header: #24242C;
+    --ds-surface-hover: #2A2A32;
+    --ds-surface-pinned: #1C2A20;
+
+    --ds-border-subtle: #2E2E34;
+    --ds-border-strong: #40404C;
+
+    --ds-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
+    --ds-shadow-md: 0 6px 20px rgba(0, 0, 0, 0.4);
+
+    --scrollbar-track: transparent;
+    --scrollbar-thumb: #3E3E48;
+    --scrollbar-thumb-hover: #50505A;
+
+    --toast-success-bg: #1C2A20;
+    --toast-success-border: color-mix(in srgb, #6BB280 30%, #2E2E34 70%);
+    --toast-error-bg: #2D1E1C;
+    --toast-error-border: color-mix(in srgb, #E07B6E 30%, #2E2E34 70%);
+  }
+}
